@@ -1,0 +1,14 @@
+package org.aprendendojboss.drools
+import org.aprendendojboss.drools.Pessoa;
+
+// podemo usar MVEL para escrever as regras, é parecido com Java...
+dialect "mvel"
+
+rule "Ola Pessoa"
+
+	// quando tiver um objeto do tipo pessoa na memória
+    when
+        p: Pessoa()
+    then
+		System.out.println("Olá " + p.nome + ", bem vindo ao mundo Drools!");
+end
