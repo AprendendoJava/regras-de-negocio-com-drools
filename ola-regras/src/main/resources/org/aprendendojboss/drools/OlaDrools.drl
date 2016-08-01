@@ -1,5 +1,5 @@
 package org.aprendendojboss.drools
-import org.aprendendojboss.drools.Pessoa;
+import org.aprendendojboss.drools.model.Pessoa;
 
 // podemo usar MVEL para escrever as regras, é parecido com Java...
 dialect "mvel"
