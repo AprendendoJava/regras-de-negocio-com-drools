@@ -16,6 +16,7 @@ import org.kie.api.runtime.KieSession;
 public class App {
 	public static void main(String[] args) {
 		KieServices kServices = KieServices.Factory.get();
+		// nosso artifato
 		ReleaseId releaseID = kServices.newReleaseId("org.aprendendojboss.drools", "ola-regras", "1.0");
 		KieContainer kContainer = kServices.newKieContainer(releaseID);
 		KieBase kBase = kContainer.getKieBase();
