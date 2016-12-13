@@ -1,0 +1,69 @@
+/*
+
+Esse projeto foi criado pelo blog aprendendo-jboss.blogspot.com
+
+*/
+
+package org.aprendendojboss.drools
+import org.aprendendojboss.drools.model.Pessoa;
+
+dialect "mvel"
+
+rule "Imprime resultado"
+no-loop  true
+    when
+        p: Pessoa(analise != "")
+    then
+	    System.out.println("Resultado da análise: " + p);
+	    
+end
+
+rule "Verifica idade"
+    when
+        p: Pessoa(analise == "", idade  < 18)
+    then
+	    modify(p) {
+			analise = "Não possui idade suficiente para aplicar os fundos";
+		} 
+end
+
+rule "Investidor sem fundos suficientes"
+no-loop true
+    when
+        p: Pessoa(analise == "",  fundos <= 1000)
+    then
+		 modify(p) {
+			analise = "Não possui fundos suficientes para nenhum dos nossos planos";
+		} 
+end
+
+
+rule "Investidor Bronze"
+no-loop true
+    when
+        p: Pessoa(analise == "",  fundos > 1000, fundos  <= 3000)
+    then
+		 modify(p) {
+			analise = "Habilitada para investidor nível Bronze";
+		} 
+end
+
+rule "Investidor Prata"
+no-loop true
+    when
+        p: Pessoa(analise == "",  fundos > 3000, fundos  <= 6000)
+    then
+		 modify(p) {
+			analise = "Habilitada para investidor nível Prata";
+		} 
+end
+
+rule "Investidor Ouro"
+no-loop true
+    when
+        p: Pessoa(analise == "",  fundos > 6000)
+    then
+		 modify(p) {
+			analise = "Habilitada para investidor nível Ouro";
+		} 
+end
