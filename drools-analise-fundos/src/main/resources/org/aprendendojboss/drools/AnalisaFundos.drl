@@ -20,10 +20,10 @@ end
 
 rule "Verifica idade"
     when
-        p: Pessoa(analise == "", idade  < 18)
+        p: Pessoa(analise == "", idade  < 16)
     then
 	    modify(p) {
-			analise = "Não possui idade suficiente para aplicar os fundos";
+			analise = "Idade insuficiente para se tornar um investidor";
 		} 
 end
 

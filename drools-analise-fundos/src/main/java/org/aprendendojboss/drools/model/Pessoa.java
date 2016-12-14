@@ -21,6 +21,14 @@ public class Pessoa {
 		this.idade = idade;
 		this.fundos = fundos;
 	}
+	
+	public Pessoa(String nome, int idade, double fundos, String analise) {
+		super();
+		this.nome = nome;
+		this.idade = idade;
+		this.fundos = fundos;
+		this.analise = analise;
+	}
 
 	public String getNome() {
 		return nome;

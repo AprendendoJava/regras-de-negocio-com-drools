@@ -7,6 +7,8 @@
 	<version>1.0</version>
 	<properties>
 		<drools.versao>6.4.0.Final-redhat-3</drools.versao>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
 	</properties>
 	<dependencies>
 		<dependency>
