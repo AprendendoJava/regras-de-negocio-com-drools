@@ -37,7 +37,6 @@ no-loop true
 		} 
 end
 
-
 rule "Investidor Bronze"
 no-loop true
     when
