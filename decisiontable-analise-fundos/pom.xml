@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.aprendendojboss.decisiontable</groupId>
+	<artifactId>decisiontable-analise-fundos</artifactId>
+	<packaging>kjar</packaging>
+	<version>1.0</version>
+
+	<properties>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<kie.api.version>6.5.0.Final</kie.api.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.drools</groupId>
+			<artifactId>drools-core</artifactId>
+			<version>${kie.api.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.drools</groupId>
+			<artifactId>drools-decisiontables</artifactId>
+			<version>${kie.api.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.kie</groupId>
+				<artifactId>kie-maven-plugin</artifactId>
+				<version>${kie.api.version}</version>
+				<goals>
+					install
+				</goals>
+				<extensions>true</extensions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
