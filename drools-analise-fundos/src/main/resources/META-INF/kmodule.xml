@@ -2,8 +2,13 @@
 <kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
 
 	<kbase name="HelloKB" packages="org.aprendendojboss.drools">
-		<ksession name="statelessKieSession" type="stateless" default="true"
-			clockType="realtime">
+		<ksession name="statelessKieSession" type="stateless"
+			default="true" clockType="realtime">
+			<!--  descomente isso para ver dados sobre a execução de regras -->
+			<listeners>
+				<ruleRuntimeEventListener type="org.kie.api.event.rule.DebugRuleRuntimeEventListener" />
+				<agendaEventListener type="org.kie.api.event.rule.DebugAgendaEventListener"/>
+			</listeners>
 		</ksession>
 	</kbase>
 

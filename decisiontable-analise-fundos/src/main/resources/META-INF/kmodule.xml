@@ -4,6 +4,13 @@
 	<kbase name="HelloKB" packages="org.aprendendojboss.decisiontable">
 		<ksession name="statelessKieSession" type="stateful" default="true"
 			clockType="realtime">
+			<!-- descomente isso para ver dados sobre a execução de regras -->
+			<listeners>
+				<ruleRuntimeEventListener
+					type="org.kie.api.event.rule.DebugRuleRuntimeEventListener" />
+				<agendaEventListener
+					type="org.kie.api.event.rule.DebugAgendaEventListener" />
+			</listeners>
 		</ksession>
 	</kbase>
 

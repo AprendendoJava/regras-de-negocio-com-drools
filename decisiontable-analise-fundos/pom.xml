@@ -17,11 +17,13 @@
 			<groupId>org.drools</groupId>
 			<artifactId>drools-core</artifactId>
 			<version>${kie.api.version}</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.drools</groupId>
 			<artifactId>drools-decisiontables</artifactId>
 			<version>${kie.api.version}</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
